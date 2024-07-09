@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import { lusitana } from './ui/fonts';
 import Image from 'next/image';
+import {Button} from "@/components/ui/button";
 
 export default function Page() {
   return (
@@ -18,11 +19,14 @@ export default function Page() {
 />
           <p className={`${lusitana.className}text-xl text-gray-800 md:text-3xl md:leading-normal`}>
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
+            <Button asChild>
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
             </a>
+            </Button>
             , brought to you by Vercel.
           </p>
+          <Button variant="outline">Click me</Button>
           <Link
             href="/login"
             className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
